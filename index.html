@@ -7,16 +7,24 @@
     padding: 150px;
     font: 20px Helvetica, sans-serif;
     color: #333;
+    margin: 0;
+    background: none;
+    overflow: hidden;
+    background-color: black;
   }
 
-  .h1 {
-    text-align: center;
-    font-size: 60px;
-  }
-
-  .tail {
-    color: #e34c26;
-    font: 20px Helvetica, sans-serif;
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./bg.png') no-repeat center center/cover;
+    filter: blur(4px);
+    z-index: -1;
+    opacity: 0.4;
+    /* Ensures the background stays behind other content */
   }
 
   .container {
@@ -24,6 +32,22 @@
     text-align: left;
     width: 750px;
     margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    /* Semi-transparent background for better readability */
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .h1 {
+    text-align: center;
+    font-size: 60px;
+    margin: 0 0 20px;
+  }
+
+  .contact {
+    font: 20px Helvetica, sans-serif;
+    color: #333;
+    margin: 10px 0;
   }
 
   .contact a {
@@ -32,23 +56,23 @@
   }
 
   .contact a:hover {
-    color: #333;
-    text-decoration: none;
+    text-decoration: underline;
   }
 
-  .contact {
+  .tail {
+    color: #e34c26;
     font: 20px Helvetica, sans-serif;
-    color: #333;
+    margin-top: 20px;
   }
 </style>
 
 <div class="container">
   <p class="h1">We're working on it!</p>
   <p class="contact">We apologize for any inconvenience, but our website is currently undergoing some scheduled
-    maintenance. In the meantime, you can still <a href="https://wa.me/+975XXXXXXXX">contact us</a>. We appreciate your
+    maintenance. In the meantime, you can still <a href="https://wa.me/+97517590044">contact us</a>. We appreciate your
     patience
     and understanding.</p>
-  <p>Thank you for choosing <a class="tail" href="https://wa.me/+975XXXXXXXX">COMPANY NAME</a></p>
+  <p>Thank you for choosing <a class="tail" href="https://wa.me/+97517590044">Tamu Worldwide Shipping Pvt. Ltd.</a></p>
 </div>
 <script>
   var emailLink = document.querySelector(".contact a");
